@@ -73,6 +73,9 @@
       if (params && params[0] === "VALUE=DATE") {
         // Just Date
 
+        //Add param for Full-Day Event(VALUE=DATE) 
+        curr['isFull'] = true;
+
         var comps = /^(\d{4})(\d{2})(\d{2})$/.exec(val);
         if (comps !== null) {
           // No TZ info - assume same timezone as this computer
